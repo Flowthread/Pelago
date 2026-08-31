@@ -13,11 +13,8 @@
 { "type": "Feature", "properties": { "category": "known", "name": "TPA Regional Bangli" }, "geometry": { "type": "Point", "coordinates": [ 115.367188, -8.35418 ] } },
 { "type": "Feature", "properties": { "category": "known", "name": "TPA Mandung" }, "geometry": { "type": "Point", "coordinates": [ 115.094908, -8.529853 ] } },
 { "type": "Feature", "properties": { "category": "detected-confirmed", "name": "detected 02" }, "geometry": { "type": "Point", "coordinates": [ 115.192555, -8.798048 ] } },
-{ "type": "Feature", "properties": { "category": "detected-likely", "name": "likely 01" }, "geometry": { "type": "Point", "coordinates": [ 115.193005, -8.074648 ] } },
 { "type": "Feature", "properties": { "category": "known", "name": "TPA Bengkala" }, "geometry": { "type": "Point", "coordinates": [ 115.169918, -8.090301 ] } },
 { "type": "Feature", "properties": { "category": "known", "name": "TPA Jungut Batu" }, "geometry": { "type": "Point", "coordinates": [ 115.459265, -8.670724 ] } },
-{ "type": "Feature", "properties": { "category": "detected-likely", "name": "likely 02" }, "geometry": { "type": "Point", "coordinates": [ 114.894225, -8.208037 ] } },
-{ "type": "Feature", "properties": { "category": "detected-confirmed", "name": "detected 03" }, "geometry": { "type": "Point", "coordinates": [ 115.102275, -8.839859 ] } },
 { "type": "Feature", "properties": { "category": "detected-likely", "name": "likely 03" }, "geometry": { "type": "Point", "coordinates": [ 115.1899, -8.8069 ] } },
 { "type": "Feature", "properties": { "category": "detected-likely", "name": "likely 04" }, "geometry": { "type": "Point", "coordinates": [ 115.1844, -8.8157 ] } }
 ]
