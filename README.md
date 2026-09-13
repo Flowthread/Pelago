@@ -197,12 +197,6 @@ Pelago's pipeline has been exercised across South and Southeast Asia, the Medite
 
 The paper describes the approach in detail and includes quantitative validation of the pixel and patch classifiers.
 
-## Citation 📖
-
-This work is described in the manuscript *Satellite monitoring of terrestrial plastic waste*. The PLOS-formatted source lives under [`paper/plos/`](paper/plos/).
-
-> Kruse C, Boyda E, Chen S, Karra K, Bou-Nahra T, Hammer D, Mathis J, Maddalene T, Jambeck J, Laurier F. *Satellite monitoring of terrestrial plastic waste*.
-
 ## Getting Started 🚀
 
 ### 1. Clone & install
@@ -289,16 +283,17 @@ Pelago/
 
 ## License ⚖️
 
-The Pelago software is released under the **MIT License** (see [`LICENSE`](LICENSE)). Dataset and manuscript assets are distributed under the **Creative Commons Attribution-NonCommercial 4.0 International** license (see [`LICENSE.md`](LICENSE.md)).
+The Pelago software is released under the **MIT License** (see [`LICENSE`](LICENSE)).
 
-## Acknowledgments 🙏
+## Project Timeline
 
-Pelago is built on open infrastructure and open data:
+- **Aug–Sep 2026** — Built for NextStep Hacks 2026 (Earth Forward)
+- **Submission** — September 2026
 
-- **Copernicus Sentinel-2** and **ESA** for the open satellite record that makes the whole pipeline possible.
-- **Descartes Labs** for the scene catalog, `Deploy` endpoints, and bulk processing that power region-scale inference.
-- The authors of *Satellite monitoring of terrestrial plastic waste* — Kruse, Boyda, Chen, Karra, Bou-Nahra, Hammer, Mathis, Maddalene, Jambeck, and Laurier — for the detection research underpinning this system.
-- The open geospatial ecosystem — GeoPandas, Shapely, Rasterio, folium, Kepler.gl — and every analyst who validated a candidate site.
+## Author
+
+**Muhammad Mujtaba** — [GitHub](https://github.com/nahhitsreal)
+Built for NextStep Hacks 2026.
 
 ---
 
