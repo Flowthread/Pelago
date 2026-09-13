@@ -42,7 +42,7 @@ If you are looking for the repository's original map exports, they live under [`
 
 ## The Problem 🌏
 
-Plastic doesn't start in the ocean — it starts on land, next to water.
+Plastic doesn't start in the ocean — it starts on land, next to water. 
 
 | | |
 |---|---|
