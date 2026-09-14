@@ -292,7 +292,7 @@ The Pelago software is released under the **MIT License** (see [`LICENSE`](LICEN
 
 ## Author
 
-**Muhammad Mujtaba** — [GitHub](https://github.com/nahhitsreal)
+**Flowthread** — [GitHub](https://github.com/nahhitsreal)
 Built for NextStep Hacks 2026.
 
 ---
