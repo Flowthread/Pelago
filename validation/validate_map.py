@@ -5,6 +5,7 @@ ipyleaflet map for validating candidate TPA sites
 import geopandas as gpd
 import ipyleaflet as ipyl
 import ipywidgets as ipyw
+from pathlib import Path
 
 
 # define XYZ tile layers to add to map
@@ -64,12 +65,12 @@ class Validator:
         fsc = ipyl.FullScreenControl(position='topright')
         self.map.add_control(fsc)
 
-        logo_file = open('pelago.png', 'rb')
-        logo = ipyw.Image(
-            value=logo_file.read(),
-            format='png'
+        logo_path = Path(__file__).parent.parent / 'assets' / 'logo.svg'
+        logo_svg = logo_path.read_text()
+        logo = ipyw.HTML(
+            value=f'<div style="width:170px;background:#0b1c38;border-radius:10px;padding:6px;'
+                  f'box-sizing:border-box;line-height:0">{logo_svg}</div>'
         )
-        logo.layout.object_fit = 'cover'
         wc = ipyl.WidgetControl(widget=logo, position='topleft')
         self.map.add_control(wc)
 
