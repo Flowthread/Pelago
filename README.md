@@ -1,10 +1,14 @@
-# Detecting and Monitoring Plastic Waste Aggregations in Sentinel-2 Imagery
-![Water-Adjacent Dump Sites](./assets/Waterside.jpg)
-[Explore the Data](https://plastic.watch.earthrise.media/). [Read an overview of the project](https://gpw.earthrise.media/). [Read a paper detailing the work](https://example.com)
+![Pelago](./assets/logo.svg)
 
+# Pelago
+*Seen from space. Remembered by the ocean.*
+
+Pelago detects water-adjacent dump sites — often illegal or unregulated dumping areas near rivers and coasts — from Sentinel-2 satellite imagery. Candidate sites are validated manually before being confirmed and monitored over time.
+
+[![Water-Adjacent Dump Sites](./assets/Waterside.jpg)](./assets/Waterside.jpg)
 
 ## Project Structure
-There are three core domains in this repo: Model Training, Site Detection, and Metadata Generation and Site Monitoring. Reference the [GPW Pipeline Diagram](./assets/GPW%20Diagrams%20-%20Full%20Pipeline%20Stacked.pdf) for information on how pipeline components are related. These scripts are run through a series of notebooks.
+There are three core domains in this repo: Model Training, Site Detection, and Metadata Generation and Site Monitoring. Reference the [Pelago Pipeline Diagram](./assets/Pelago%20Diagrams%20-%20Full%20Pipeline%20Stacked.pdf) for information on how pipeline components are related. These scripts are run through a series of notebooks.
 
 ### Setup
 
@@ -15,7 +19,7 @@ $ source env/bin/activate
 $ pip install -r requirements.txt
 ```
 
-Imports are given relative to the repo base directory, which therefore must be on PYTHONPATH. Either in your .bash_profile or at the end of the file env/bin/activate add: `export PYTHONPATH=/path/to/plastics:$PYTHONPATH`
+Imports are given relative to the repo base directory, which therefore must be on PYTHONPATH. Either in your .bash_profile or at the end of the file env/bin/activate add: `export PYTHONPATH=/path/to/pelago:$PYTHONPATH`
 
 The bulk-processing pipeline runs on Descartes Labs. Authorization on your local is handled via the command line helper function: 
 `$ descarteslabs auth login` 

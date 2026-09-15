@@ -1,6 +1,6 @@
 # Loader
 
-Loader for **Global Plastic Watch** data. This takes the model
+Loader for **Pelago** data. This takes the model
 outputs and loads them into the API.
 
 ### Transformations
