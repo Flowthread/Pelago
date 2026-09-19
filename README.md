@@ -63,48 +63,61 @@ The output is an API-backed, map-first product: worldwide detection coverage, pe
 
 ## How It Works / Architecture ⚙️
 
-```text
-┌──────────────────────────────────────────────────────────────────────────┐
-│                          INGESTION                                       │
-│   Sentinel-2 (10 m RGB + multispectral) → Descartes Labs catalog        │
-│   Population-limited tile generation → per-region download queue        │
-└──────────────────────────────────┬───────────────────────────────────────┘
-                                   │
-┌──────────────────────────────────▼───────────────────────────────────────┐
-│                          MODEL LAYER                                     │
-│   Pixel classifier (spectral waste signature, per-pixel)                │
-│        │                                                                 │
-│        ▼                                                                 │
-│   Patch classifier (weakly-labeled ensemble over 28×28×24 windows)      │
-│        │                                                                 │
-│        ▼                                                                 │
-│   Intersection filter (pixel ∩ patch agreement)                         │
-└──────────────────────────────────┬───────────────────────────────────────┘
-                                   │
-┌──────────────────────────────────▼───────────────────────────────────────┐
-│                          SITE DETECTION                                  │
-│   Candidate generation (blob detection on scored tiles)                 │
-│        │                                                                 │
-│        ▼                                                                 │
-│   Manual validation (imagery review by analysts)                        │
-│        │                                                                 │
-│        ▼                                                                 │
-│   Confirmed sites (confirmed / industrial / uncertain / negative)       │
-└──────────────────────────────────┬───────────────────────────────────────┘
-                                   │
-┌──────────────────────────────────▼───────────────────────────────────────┐
-│                          METADATA + MONITORING                           │
-│   Contour generation (per-site extent over time)                        │
-│   Metadata enrichment (centroids, addresses via Nominatim)              │
-│   Results pushed to the Pelago API                                      │
-└──────────────────────────────────┬───────────────────────────────────────┘
-                                   │
-┌──────────────────────────────────▼───────────────────────────────────────┐
-│                          PRESENTATION                                    │
-│   Web map (Next.js + MapLibre)  •  Alerts  •  Monitoring dashboard       │
-│   Open GeoJSON/CSV export  •  API access                                 │
-└──────────────────────────────────────────────────────────────────────────┘
+```mermaid
+flowchart TD
+    subgraph INGESTION["🛰️ INGESTION"]
+        A1["Sentinel-2<br/>10 m RGB + multispectral"]
+        A2["Descartes Labs Catalog"]
+        A3["Population-weighted<br/>tile generation"]
+        A1 --> A2 --> A3
+    end
+
+    subgraph MODEL["🧠 MODEL LAYER"]
+        B1["Pixel Classifier<br/>spectral waste signature"]
+        B2["Patch Classifier<br/>weakly-labeled ensemble over 28×28×24"]
+        B3["Intersection Filter<br/>pixel ∩ patch agreement"]
+        B1 --> B2 --> B3
+    end
+
+    subgraph DETECT["📍 SITE DETECTION"]
+        C1["Candidate Generation<br/>blob detection on scored tiles"]
+        C2["Manual Validation<br/>analyst imagery review"]
+        C3["Confirmed Sites<br/>confirmed · industrial · uncertain · negative"]
+        C1 --> C2 --> C3
+    end
+
+    subgraph META["📊 METADATA + MONITORING"]
+        D1["Contour Generation<br/>per-site extent over time"]
+        D2["Metadata Enrichment<br/>centroids · addresses via Nominatim"]
+        D3["Pelago API"]
+        D1 --> D2 --> D3
+    end
+
+    subgraph PRESENT["🌐 PRESENTATION"]
+        E1["Web Map<br/>Next.js + MapLibre"]
+        E2["Alerts"]
+        E3["Monitoring Dashboard"]
+        E4["Open GeoJSON / CSV Export"]
+        E5["API Access"]
+    end
+
+    A3 --> B1
+    B3 --> C1
+    C3 --> D1
+    D3 --> E1
+    D3 --> E2
+    D3 --> E3
+    D3 --> E4
+    D3 --> E5
+
+    style INGESTION fill:#0a1929,stroke:#00d4ff,stroke-width:2px,color:#f5f7fa
+    style MODEL fill:#0a1929,stroke:#ffb020,stroke-width:2px,color:#f5f7fa
+    style DETECT fill:#0a1929,stroke:#00e0ff,stroke-width:2px,color:#f5f7fa
+    style META fill:#0a1929,stroke:#ff6b6b,stroke-width:2px,color:#f5f7fa
+    style PRESENT fill:#0a1929,stroke:#00d4ff,stroke-width:2px,color:#f5f7fa
 ```
+
+
 
 **1. Ingestion.** The pipeline pulls Sentinel-2 scenes through **Descartes Labs**, constrained to a population-weighted tile grid so compute goes where people and waste actually are.
 
