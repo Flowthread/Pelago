@@ -15,7 +15,7 @@ from shapely.geometry.base import CAP_STYLE, geom_from_wkt
 
 HEADERS = {"Content-type": "application/json", "Accept": "application/json"}
 AREA_KEY = "area (km^2)"
-locator = Nominatim(user_agent="Earthrise GPW")
+locator = Nominatim(user_agent="Pelago")
 cache_map = {}
 nominatim_calls = 0 
 cached_addresses = 0
@@ -205,7 +205,7 @@ if __name__ == "__main__":
     parser = argparse.ArgumentParser(description='Site Data Loader')
     parser.add_argument("--user",required=False,nargs=1,default=["admin"], type=str,help="Username for transactional API operations", dest="user")
     parser.add_argument("--pw",required=False,nargs=1,default=["plastics"], type=str,help="Password for transactional API operations", dest="password")
-    parser.add_argument("--api",required=False,nargs=1,default=["https://api.plastic.watch.earthrise.media"], type=str,help="API Endpoint", dest="api")
+    parser.add_argument("--api",required=False,nargs=1,default=["https://api.pelago.example"], type=str,help="API Endpoint", dest="api")
     parser.add_argument("--dir",required=True,nargs=1, type=str, help="Directory to find geojson files", dest="dir")
 
     args = vars(parser.parse_args())

@@ -64,13 +64,13 @@ class Validator:
         fsc = ipyl.FullScreenControl(position='topright')
         self.map.add_control(fsc)
 
-        gpw_file = open('gpw.png', 'rb')
-        gpw = ipyw.Image(
-            value=gpw_file.read(),
+        logo_file = open('pelago.png', 'rb')
+        logo = ipyw.Image(
+            value=logo_file.read(),
             format='png'
         )
-        gpw.layout.object_fit = 'cover'
-        wc = ipyl.WidgetControl(widget=gpw, position='topleft')
+        logo.layout.object_fit = 'cover'
+        wc = ipyl.WidgetControl(widget=logo, position='topleft')
         self.map.add_control(wc)
 
 
