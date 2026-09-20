@@ -1,49 +1,44 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 850 240" role="img" aria-label="Pelago logo">
-  <defs>
-    <radialGradient id="ocean-bg" cx="50%" cy="38%" r="75%">
-      <stop offset="0%" stop-color="#12294d"/>
-      <stop offset="60%" stop-color="#0b1c38"/>
-      <stop offset="100%" stop-color="#060f24"/>
-    </radialGradient>
-    <radialGradient id="ocean-disc" cx="50%" cy="38%" r="75%">
-      <stop offset="0%" stop-color="#14315f"/>
-      <stop offset="60%" stop-color="#0d2144"/>
-      <stop offset="100%" stop-color="#081530"/>
-    </radialGradient>
-  </defs>
-
-  <!-- Rounded tile -->
-  <rect x="4" y="4" width="842" height="232" rx="56" fill="url(#ocean-bg)"/>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 240" role="img" aria-label="Pelago logo">
+  <!-- Rounded brand tile -->
+  <rect x="4" y="4" width="892" height="232" rx="56" fill="#ffcb2e"/>
 
   <!-- Emblem -->
-  <g transform="translate(36 20) scale(0.8)">
-    <circle cx="120" cy="120" r="118" fill="url(#ocean-disc)"/>
-    <circle cx="120" cy="120" r="102" fill="none" stroke="#ffcb2e" stroke-width="7"/>
-    <circle cx="120" cy="120" r="90" fill="none" stroke="#ffffff" stroke-opacity="0.16" stroke-width="1.6"/>
-    <circle cx="120" cy="120" r="66" fill="none" stroke="#ffffff" stroke-opacity="0.14" stroke-width="1.6"/>
-    <circle cx="120" cy="120" r="66" fill="none" stroke="#ffffff" stroke-opacity="0.28" stroke-width="1.6" stroke-dasharray="3 9"/>
-    <g transform="translate(120 46)">
-      <rect x="-3.5" y="-4" width="7" height="8" rx="1.5" fill="#ffcb2e"/>
-      <rect x="-14" y="-2.5" width="8" height="5" rx="1" fill="#ffffff" fill-opacity="0.9"/>
-      <rect x="6" y="-2.5" width="8" height="5" rx="1" fill="#ffffff" fill-opacity="0.9"/>
-    </g>
-    <path d="M38 96 C52 90 66 90 80 96" fill="none" stroke="#ffffff" stroke-opacity="0.28" stroke-width="2.5" stroke-linecap="round"/>
-    <path d="M48 108 C60 103 72 103 84 108" fill="none" stroke="#ffffff" stroke-opacity="0.2" stroke-width="2" stroke-linecap="round"/>
-    <path d="M30 240 L30 172 C 52 156 84 152 110 164 C 132 148 168 146 198 158 C 206 161 212 166 216 174 L218 240 Z" fill="#ffffff" fill-opacity="0.94"/>
-    <path d="M30 172 C 52 156 84 152 110 164 C 132 148 168 146 198 158 C 206 161 212 166 216 174" fill="none" stroke="#ffcb2e" stroke-width="5" stroke-linecap="round"/>
-    <circle cx="162" cy="148" r="20" fill="none" stroke="#ffcb2e" stroke-width="2.5" stroke-opacity="0.45"/>
-    <circle cx="162" cy="148" r="11" fill="none" stroke="#ffcb2e" stroke-width="2.5" stroke-opacity="0.75"/>
-    <g transform="translate(162 148)">
-      <path d="M0 -16 C 9 -7 12 0 12 4 A 12 12 0 1 1 -12 4 C -12 0 -9 -7 0 -16 Z" fill="#ffcb2e"/>
-      <circle cx="0" cy="3.5" r="4" fill="#0b1c38"/>
+  <g transform="translate(30 16) scale(0.87)">
+    <!-- Ocean disc: white water, yellow coast -->
+    <circle cx="120" cy="120" r="120" fill="#ffffff"/>
+    <circle cx="120" cy="120" r="114" fill="#fffdf5" stroke="#e8b100" stroke-width="2"/>
+
+    <!-- Ocean swells (yellow) -->
+    <path d="M52 152 C66 148 80 148 94 152" fill="none" stroke="#ffcb2e" stroke-width="4" stroke-linecap="round" stroke-opacity="0.5"/>
+    <path d="M64 166 C76 162 100 162 114 166" fill="none" stroke="#ffcb2e" stroke-width="4" stroke-linecap="round" stroke-opacity="0.35"/>
+
+    <!-- Land silhouette (yellow) with white shoreline edge -->
+    <path d="M28 240 L28 176 C40 168 56 166 70 172 C84 160 104 156 122 162 C138 156 158 158 170 168 C186 160 202 166 212 178 L212 240 Z" fill="#ffcb2e"/>
+    <path d="M28 176 C40 168 56 166 70 172 C84 160 104 156 122 162 C138 156 158 158 170 168 C186 160 202 166 212 178" fill="none" stroke="#ffffff" stroke-width="5" stroke-linecap="round"/>
+
+    <!-- Target lock: satellite crosshair -->
+    <circle cx="120" cy="120" r="108" fill="none" stroke="#ffcb2e" stroke-width="3" stroke-opacity="0.85"/>
+    <circle cx="120" cy="120" r="94" fill="none" stroke="#ffcb2e" stroke-width="2" stroke-opacity="0.5"/>
+    <line x1="120" y1="6" x2="120" y2="40" stroke="#ffcb2e" stroke-width="3"/>
+    <line x1="120" y1="200" x2="120" y2="234" stroke="#ffcb2e" stroke-width="3"/>
+    <line x1="6" y1="120" x2="40" y2="120" stroke="#ffcb2e" stroke-width="3"/>
+    <line x1="200" y1="120" x2="234" y2="120" stroke="#ffcb2e" stroke-width="3"/>
+
+    <!-- Detection pin at the waterline -->
+    <g transform="translate(146 126)">
+      <circle cx="0" cy="8" r="38" fill="none" stroke="#ffcb2e" stroke-width="2.5" stroke-opacity="0.4"/>
+      <circle cx="0" cy="8" r="22" fill="none" stroke="#ffcb2e" stroke-width="2.5" stroke-opacity="0.65"/>
+      <path d="M0 -30 C15 -18 21 -7 21 4 A21 21 0 1 1 -21 4 C-21 -7 -15 -18 0 -30 Z" fill="#ffcb2e" stroke="#ffffff" stroke-width="3"/>
+      <circle cx="0" cy="4" r="7" fill="#ffffff"/>
     </g>
   </g>
 
   <!-- Wordmark -->
   <g font-family="'Segoe UI', 'Helvetica Neue', Arial, sans-serif">
-    <text x="238" y="108" font-size="86" font-weight="700" letter-spacing="6" fill="#ffffff">PELAGO</text>
-    <line x1="240" y1="132" x2="700" y2="132" stroke="#ffcb2e" stroke-width="4" stroke-linecap="round"/>
-    <text x="238" y="169" font-size="19" font-weight="600" letter-spacing="2.5" fill="#ffcb2e">WHAT THEY DUMP, WE FIND</text>
-    <text x="238" y="197" font-size="13" font-weight="400" letter-spacing="3" fill="#ffffff" fill-opacity="0.75">WATER-ADJACENT WASTE SITES</text>
+    <text x="272" y="105" font-size="86" font-weight="800" letter-spacing="4" fill="#ffffff">PELAGO</text>
+    <line x1="274" y1="128" x2="700" y2="128" stroke="#ffffff" stroke-width="4" stroke-linecap="round"/>
+    <rect x="276" y="164" width="120" height="7" rx="3.5" fill="#ffffff"/>
+    <text x="276" y="196" font-size="20" font-weight="700" letter-spacing="2.2" fill="#ffffff">WHAT THEY DUMP, WE FIND</text>
+    <text x="276" y="220" font-size="13" font-weight="600" letter-spacing="2.4" fill="#ffffff" fill-opacity="0.88">WASTE SITE DETECTION FROM ORBIT</text>
   </g>
 </svg>

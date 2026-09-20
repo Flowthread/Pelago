@@ -65,11 +65,10 @@ class Validator:
         fsc = ipyl.FullScreenControl(position='topright')
         self.map.add_control(fsc)
 
-        logo_path = Path(__file__).parent.parent / 'assets' / 'logo.svg'
+        logo_path = Path(__file__).parent.parent / 'assets' / 'logo-mark.svg'
         logo_svg = logo_path.read_text()
         logo = ipyw.HTML(
-            value=f'<div style="width:170px;background:#0b1c38;border-radius:10px;padding:6px;'
-                  f'box-sizing:border-box;line-height:0">{logo_svg}</div>'
+            value=f'<div style="width:60px;line-height:0">{logo_svg}</div>'
         )
         wc = ipyl.WidgetControl(widget=logo, position='topleft')
         self.map.add_control(wc)
