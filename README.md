@@ -1,7 +1,7 @@
 ![Pelago](./assets/logo.svg)
 
 # Pelago
-*Seen from space. Remembered by the ocean.*
+*What they dump, we find.*
 
 Pelago detects water-adjacent dump sites — often illegal or unregulated dumping areas near rivers and coasts — from Sentinel-2 satellite imagery. Candidate sites are validated manually before being confirmed and monitored over time.
 

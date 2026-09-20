@@ -7,7 +7,7 @@
     </radialGradient>
   </defs>
 
-  <!-- Emblem disc: the ocean seen from space -->
+  <!-- Emblem disc: the ocean viewed from orbit -->
   <circle cx="120" cy="120" r="118" fill="url(#ocean)"/>
 
   <!-- Satellite aperture ring (brand yellow) -->

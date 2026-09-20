@@ -1,4 +1,4 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 760 240" role="img" aria-label="Pelago logo">
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 850 240" role="img" aria-label="Pelago logo">
   <defs>
     <radialGradient id="ocean-bg" cx="50%" cy="38%" r="75%">
       <stop offset="0%" stop-color="#12294d"/>
@@ -13,7 +13,7 @@
   </defs>
 
   <!-- Rounded tile -->
-  <rect x="4" y="4" width="752" height="232" rx="56" fill="url(#ocean-bg)"/>
+  <rect x="4" y="4" width="842" height="232" rx="56" fill="url(#ocean-bg)"/>
 
   <!-- Emblem -->
   <g transform="translate(36 20) scale(0.8)">
@@ -41,9 +41,9 @@
 
   <!-- Wordmark -->
   <g font-family="'Segoe UI', 'Helvetica Neue', Arial, sans-serif">
-    <text x="250" y="108" font-size="86" font-weight="700" letter-spacing="6" fill="#ffffff">PELAGO</text>
-    <line x1="252" y1="132" x2="712" y2="132" stroke="#ffcb2e" stroke-width="4" stroke-linecap="round"/>
-    <text x="250" y="168" font-size="23" font-weight="600" letter-spacing="8" fill="#ffcb2e">SEEN FROM SPACE</text>
-    <text x="250" y="196" font-size="16" font-weight="400" letter-spacing="4" fill="#ffffff" fill-opacity="0.75">WATER-ADJACENT WASTE SITE DETECTION</text>
+    <text x="238" y="108" font-size="86" font-weight="700" letter-spacing="6" fill="#ffffff">PELAGO</text>
+    <line x1="240" y1="132" x2="700" y2="132" stroke="#ffcb2e" stroke-width="4" stroke-linecap="round"/>
+    <text x="238" y="169" font-size="19" font-weight="600" letter-spacing="2.5" fill="#ffcb2e">WHAT THEY DUMP, WE FIND</text>
+    <text x="238" y="197" font-size="13" font-weight="400" letter-spacing="3" fill="#ffffff" fill-opacity="0.75">WATER-ADJACENT WASTE SITES</text>
   </g>
 </svg>
